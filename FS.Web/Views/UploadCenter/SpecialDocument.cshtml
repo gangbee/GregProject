@@ -34,7 +34,29 @@
                         }
 
 @Html.Partial("_ProgressStep", new FS.Web.Models.ProgressModel{ProgressStep=step})
+@{
+    var imgIcon = "";
+   
+    if(!string.IsNullOrWhiteSpace(Model.FileName))
+    {
+        var exe = Model.FileName.Substring(Model.FileName.LastIndexOf(".")+1);
 
+        if (exe.ToLower() == "pdf")
+        {
+            imgIcon = "/Images/pdficon_large.png";
+        }
+        else if (exe.ToLower().IndexOf("doc") > -1)
+        {
+            imgIcon = "/Images/word.png";
+        }
+        else if (exe.ToLower().IndexOf("wp") > -1)
+        {
+            imgIcon = "/Images/wp.png";
+        }
+    }
+        
+        
+}
 <div class="bs-callout bs-callout-warning">
     <h3>@ViewData["Title"]</h3>
     <p>Do not mix form groups or grid column classes directly with input groups. Instead, nest the input group inside of the form group or grid-related element.</p>
@@ -102,7 +124,7 @@
                             <div id="links" style="@(string.IsNullOrWhiteSpace(Model.FileName) ? "display:none" : "")">
                             <label class="col-sm-4 control-label"></label>
                              <a href="~/Document/@Model.UserId.ToString()_@Model.DocumentKey/@Model.FileName" id="pdfLink" target="_blank">
-                                <img src="~/Images/pdficon_large.png" alt="pdf" /> &nbsp; @Model.FileName 
+                                <img src="@imgIcon" alt="" id="imgpdf"  /> &nbsp;<div id="filenamediv" class="row">  @Model.FileName </div>
                              </a>
                                   <a href="~/UploadCenter/DeleteDocument/@Model.CustomerDocumentId" id="delPdf" ><span class="badge" ><span  class="glyphicon glyphicon-remove red" style="font-size: 16px;"></span></span>
                              </a>
@@ -128,8 +150,16 @@
 
                    
                          
-                             <a class="btn btn-primary btn-sm pull-right" style="margin-left: 5px;"  role="button" href="~/UploadCenter/SpecialDocument/@id">Next
+                            @if(id != 0)
+                        {
+                         
+                             <a class="btn btn-primary btn-sm pull-right" role="button" href="~/UploadCenter/SpecialDocument/@id">Next
                             </a>
+                        }else
+                        {
+                             <a class="btn btn-primary btn-sm pull-right" role="button" href="~/UploadCenter/AdditionalFiles">Next
+                            </a>
+                        }
                         @if (id == 2)
                         {
                             <a class="btn btn-primary btn-sm pull-right" style="margin-left: 5px;"  role="button" href="~/Account/ContactPersonEdit/@id">Back
