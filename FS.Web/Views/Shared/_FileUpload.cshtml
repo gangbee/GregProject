@@ -1,0 +1,90 @@
+﻿@model FS.Customer.CustomerDocument
+<form method="post" enctype="multipart/form-data" action="UploadFiles">  
+    <div class="row">
+        <div class="form-horizontal">
+             <div class="form-group">
+                  <label class="col-sm-4 control-label">&nbsp;</label>
+             <div class="col-sm-6">
+            <span class="bg-danger">@ViewData["Error"]</span>
+            <span class="bg-success">@ViewData["Success"]</span>
+            </div>
+                 </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.DocumentKey, new { @class = "col-sm-4 control-label" })
+                <div class="col-sm-6">
+                    @Html.DropDownListFor(model => model.DocumentKey, ViewData["Documents"] as IEnumerable<SelectListItem>,"-- Select --", new { @id="cmbDocs", @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.DocumentKey, string.Empty, new { @style = "color:red;!important" })
+                </div>
+
+
+            </div>
+         <div class="form-group">
+                    @Html.LabelFor(model => model.DocumentName, new { @class = "col-sm-4 control-label" })
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(model => model.DocumentName, new { @id="txtDocName",@class = "form-control", @placeholder = "Enter file name" })
+                        @Html.ValidationMessageFor(model => model.DocumentName, string.Empty, new { @style = "color:red;!important" })
+         </div>
+
+
+                </div>
+            <div class="form-group">
+                <label class="col-sm-4 control-label"></label>
+                <div class="col-sm-3" style="text-align:left; margin-top:10px;">
+                        <input type="file" id="userFilemain" name="FileName" />
+                      <a href="#"class="btn btn-primary btn-sm" role="button"  id="fileUploadmain"> Select a File</a></br>
+                    <span style="font-size:11px">(Pdf, Word documents, word perfect)</span>   </br>
+                   
+                </div>
+                <div class="col-sm-5">                    
+                                 
+                </div> 
+            </div>
+
+
+            
+        </div>
+    </div>
+     <div class="row">
+        
+        <div class="col-md-4">&nbsp;</div>
+        <diV class="col-md-3" style="text-align:left; margin-top:10px;">
+            @Html.HiddenFor(model => model.CustomerDocumentId)
+        @Html.HiddenFor(model => model.UserId)
+            
+        <input type="submit" style="margin-right: 5px;" class="btn btn-success btn-sm" value="Upload File" />
+        </diV>
+
+
+        <div class="col-md-5" style="text-align:right; margin-top:10px;">
+        
+        @if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString().ToLower() != "uploadfiles")
+        {
+               <a class="btn btn-primary btn-sm" style="margin-right:5px;" role="button" href="~/Account/RegisterSummary">NEXT
+        </a>
+        }
+      
+            </div> 
+    </div>
+    <div  class="col-md-12">
+    <hr />
+            </div>
+   
+     <div class="row">
+        <div class="col-md-12">
+            @Html.Partial("_FileList", Model.CustomerDocumentList)
+        </div>
+        </div>
+    @section scripts
+    {
+    <script>
+        $(document).ready(function () {
+            $('.datepicker').datepicker({
+                format: 'mm/dd/yyyy',
+                startDate: new Date(1920,1,1),
+                pickTime: false
+            })
+           
+        });
+    </script>
+        }
+</form>
