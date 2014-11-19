@@ -339,6 +339,18 @@ function ajaxFileUpload() {
                     $("#pdfLink").attr("href", showLink);
                     $("#filenamediv").html(data.filename);
                     $("#links").show();
+                    var fileExe = data.filename.split('.').pop();
+                    var icon = "";
+                    if (fileExe.toLowerCase() == "pdf") {
+                        icon = "/Images/pdficon_large.png";
+                    } else if (fileExe.toLowerCase().indexOf("doc") > -1) {
+                        icon = "/Images/word.png";
+                    } else if (fileExe.toLowerCase().indexOf("wp") > -1) {
+                        icon = "/Images/wp.png";
+                    }
+
+                    $("#imgpdf").attr("src", icon);
+                    //imgDoc
                 }
             }
         },
