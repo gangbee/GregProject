@@ -180,6 +180,58 @@ namespace FS.Web.Controllers
            
         }
 
+
+        public ActionResult MyPage()
+        {
+            return View();
+        }
+
+        public string GetInstitutes()
+        {
+            var request = System.Net.WebRequest.Create("https://private-anon-b3a032475-enquiryapi.apiary-mock.com/faculties") as System.Net.HttpWebRequest;
+            request.KeepAlive = true;
+
+            request.Method = "GET";
+
+            request.Accept = "application/json;version=1";
+            request.Headers.Add("authorization", "ZGVtbzpkZW1v");
+            request.ContentLength = 0;
+
+            string responseContent = null;
+            using (var response = request.GetResponse() as System.Net.HttpWebResponse)
+            {
+                using (var reader = new System.IO.StreamReader(response.GetResponseStream()))
+                {
+                    responseContent = reader.ReadToEnd();
+                }
+            }
+
+            return responseContent;
+        }
+
+        public string GetCourses(string id)
+        {
+            var request = System.Net.WebRequest.Create("https://private-anon-b3a032475-enquiryapi.apiary-mock.com/courses?faculty=" + id) as System.Net.HttpWebRequest;
+            request.KeepAlive = true;
+
+            request.Method = "GET";
+
+            request.Accept = "application/json;version=1";
+            request.Headers.Add("authorization", "ZGVtbzpkZW1v");
+            request.ContentLength = 0;
+
+            string responseContent = null;
+            using (var response = request.GetResponse() as System.Net.HttpWebResponse)
+            {
+                using (var reader = new System.IO.StreamReader(response.GetResponseStream()))
+                {
+                    responseContent = reader.ReadToEnd();
+                }
+            }
+
+            return responseContent;
+        }
+
        
     }
 }
