@@ -417,7 +417,6 @@ D:\Gulan\SageOwl_project\trunk\FS.Web\bin\DataAccess.pdb
 D:\Gulan\SageOwl_project\trunk\FS.Web\bin\FS.Common.pdb
 D:\Gulan\SageOwl_project\trunk\FS.Web\bin\FS.Customer.pdb
 D:\Gulan\SageOwl_project\trunk\FS.Web\bin\Infarstructure.pdb
-D:\Gulan\SageOwl_project\trunk\FS.Web\bin\itextsharp.xml
 D:\Gulan\SageOwl_project\trunk\FS.Web\bin\System.Web.Helpers.xml
 D:\Gulan\SageOwl_project\trunk\FS.Web\bin\System.Web.Mvc.xml
 D:\Gulan\SageOwl_project\trunk\FS.Web\bin\System.Web.Razor.xml

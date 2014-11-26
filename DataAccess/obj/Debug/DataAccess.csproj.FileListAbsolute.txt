@@ -63,3 +63,8 @@ D:\Gulan\Sageowls2\DataAccess\bin\Debug\DataAccess.pdb
 D:\Gulan\Sageowls2\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
 D:\Gulan\Sageowls2\DataAccess\obj\Debug\DataAccess.dll
 D:\Gulan\Sageowls2\DataAccess\obj\Debug\DataAccess.pdb
+D:\Gulan\SageOwl_project\trunk\DataAccess\bin\Debug\DataAccess.dll
+D:\Gulan\SageOwl_project\trunk\DataAccess\bin\Debug\DataAccess.pdb
+D:\Gulan\SageOwl_project\trunk\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+D:\Gulan\SageOwl_project\trunk\DataAccess\obj\Debug\DataAccess.dll
+D:\Gulan\SageOwl_project\trunk\DataAccess\obj\Debug\DataAccess.pdb

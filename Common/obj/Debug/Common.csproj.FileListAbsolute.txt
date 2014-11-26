@@ -11,3 +11,8 @@ D:\Nish\Greg\LiveSite\FileStoreSecure\Common\bin\Debug\Common.pdb
 D:\Nish\Greg\LiveSite\FileStoreSecure\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 D:\Nish\Greg\LiveSite\FileStoreSecure\Common\obj\Debug\Common.dll
 D:\Nish\Greg\LiveSite\FileStoreSecure\Common\obj\Debug\Common.pdb
+D:\Gulan\SageOwl_project\trunk\Common\bin\Debug\Common.dll
+D:\Gulan\SageOwl_project\trunk\Common\bin\Debug\Common.pdb
+D:\Gulan\SageOwl_project\trunk\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+D:\Gulan\SageOwl_project\trunk\Common\obj\Debug\Common.dll
+D:\Gulan\SageOwl_project\trunk\Common\obj\Debug\Common.pdb

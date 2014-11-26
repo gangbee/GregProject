@@ -41,3 +41,14 @@ D:\Gulan\Sageowls2\Infarstructure\bin\Release\System.Web.Mvc.xml
 D:\Gulan\Sageowls2\Infarstructure\obj\Release\Infarstructure.csprojResolveAssemblyReference.cache
 D:\Gulan\Sageowls2\Infarstructure\obj\Release\Infarstructure.dll
 D:\Gulan\Sageowls2\Infarstructure\obj\Release\Infarstructure.pdb
+D:\Gulan\SageOwl_project\trunk\Infarstructure\bin\Release\Infarstructure.dll
+D:\Gulan\SageOwl_project\trunk\Infarstructure\bin\Release\Infarstructure.pdb
+D:\Gulan\SageOwl_project\trunk\Infarstructure\bin\Release\DataAccess.dll
+D:\Gulan\SageOwl_project\trunk\Infarstructure\bin\Release\FS.Customer.dll
+D:\Gulan\SageOwl_project\trunk\Infarstructure\bin\Release\System.Web.Mvc.dll
+D:\Gulan\SageOwl_project\trunk\Infarstructure\bin\Release\DataAccess.pdb
+D:\Gulan\SageOwl_project\trunk\Infarstructure\bin\Release\FS.Customer.pdb
+D:\Gulan\SageOwl_project\trunk\Infarstructure\bin\Release\System.Web.Mvc.xml
+D:\Gulan\SageOwl_project\trunk\Infarstructure\obj\Release\Infarstructure.csprojResolveAssemblyReference.cache
+D:\Gulan\SageOwl_project\trunk\Infarstructure\obj\Release\Infarstructure.dll
+D:\Gulan\SageOwl_project\trunk\Infarstructure\obj\Release\Infarstructure.pdb

@@ -50,3 +50,14 @@ D:\Dev\FileStoreSecure\FileStoreSecure\Infarstructure\bin\Debug\FS.Customer.pdb
 D:\Dev\FileStoreSecure\FileStoreSecure\Infarstructure\obj\Debug\Infarstructure.csprojResolveAssemblyReference.cache
 D:\Dev\FileStoreSecure\FileStoreSecure\Infarstructure\obj\Debug\Infarstructure.dll
 D:\Dev\FileStoreSecure\FileStoreSecure\Infarstructure\obj\Debug\Infarstructure.pdb
+D:\Gulan\SageOwl_project\trunk\Infarstructure\bin\Debug\Infarstructure.dll
+D:\Gulan\SageOwl_project\trunk\Infarstructure\bin\Debug\Infarstructure.pdb
+D:\Gulan\SageOwl_project\trunk\Infarstructure\bin\Debug\DataAccess.dll
+D:\Gulan\SageOwl_project\trunk\Infarstructure\bin\Debug\FS.Customer.dll
+D:\Gulan\SageOwl_project\trunk\Infarstructure\bin\Debug\System.Web.Mvc.dll
+D:\Gulan\SageOwl_project\trunk\Infarstructure\bin\Debug\DataAccess.pdb
+D:\Gulan\SageOwl_project\trunk\Infarstructure\bin\Debug\FS.Customer.pdb
+D:\Gulan\SageOwl_project\trunk\Infarstructure\bin\Debug\System.Web.Mvc.xml
+D:\Gulan\SageOwl_project\trunk\Infarstructure\obj\Debug\Infarstructure.csprojResolveAssemblyReference.cache
+D:\Gulan\SageOwl_project\trunk\Infarstructure\obj\Debug\Infarstructure.dll
+D:\Gulan\SageOwl_project\trunk\Infarstructure\obj\Debug\Infarstructure.pdb
