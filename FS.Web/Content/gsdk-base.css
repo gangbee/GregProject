@@ -39,12 +39,19 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, .btn-s
     -webkit-font-smoothing: antialiased;
 }
 
-.navbar-brand .img-thumbnail
-{
-        background-color:none;
-        border : none;
+.dashboard_img {
+    background-color:none;
+    padding:0px;
+    border:none;    
 }
 
+.bg-danger {    
+    background-color:#ffffff !important;
+    padding:3px;
+    color : red;
+    font-size:90%;
+    margin-bottom:5px;
+}
 
 
 /* Tooltip example*/
