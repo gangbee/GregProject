@@ -424,10 +424,28 @@ namespace FS.Web.Controllers
             var userUploadedFiles = CustomerDocument.GetDocuments(CurrentUser.UserId);
             var userFiles = docmodel.DocumentTypes; //CustomerDocument.GetDocuments(CurrentUser.UserId);
             var selectedList = userUploadedFiles.Select(f => f.DocumentKey).ToArray();
-            userFiles = userFiles.Where(u => ! selectedList.Contains(u.DataValue)).ToList();
-            ViewData["Documents"] = userFiles
-                .Select(d => new SelectListItem { Value = d.DataValue, Text = docmodel.DocumentTypes.FirstOrDefault(p => p.DataValue == d.DataValue).DataText });
+           // userFiles = userFiles.Where(u => ! selectedList.Contains(u.DataValue)).ToList();
+            //ViewData["Documents"] = userFiles
+            //    .Select(d => new SelectListItem { Value = d.DataValue, Text = docmodel.DocumentTypes.FirstOrDefault(p => p.DataValue == d.DataValue).DataText });
+            var orderdList = new List<SelectListItem>();
+            var hippa = userFiles.FirstOrDefault(d => d.DataValue == "HIPAA");
+            if (hippa != null)
+            {
+                orderdList.Add(new SelectListItem { Value = hippa.DataValue, Text = hippa.DataText });
+            }
 
+            var md = userFiles.FirstOrDefault(d => d.DataValue == "MD");
+            if (md != null)
+            {
+                orderdList.Add(new SelectListItem { Value = md.DataValue, Text = md.DataText });
+            }
+            var dc = userFiles.FirstOrDefault(d => d.DataValue == "DC");
+            if (dc != null)
+            {
+                orderdList.Add(new SelectListItem { Value = dc.DataValue, Text = dc.DataText });
+            }
+            ViewData["Documents"] = orderdList;
+                
             return View(model);
         }
 
