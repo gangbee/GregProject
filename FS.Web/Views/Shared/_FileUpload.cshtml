@@ -1,5 +1,5 @@
 ﻿@model FS.Customer.CustomerDocument
-<form method="post" enctype="multipart/form-data" action="UploadFiles">  
+<form method="post" id="frmAdditonalFiles" enctype="multipart/form-data">  
     <div class="row">
         <div class="form-horizontal">
              <div class="form-group">
@@ -30,14 +30,18 @@
             <div class="form-group">
                 <label class="col-sm-4 control-label"></label>
                 <div class="col-sm-3" style="text-align:left; margin-top:10px;">
-                        <input type="file" id="userFilemain" name="FileName" />
-                      <a href="#"class="btn btn-primary btn-sm" role="button"  id="fileUploadmain"> Upload file</a></br>
+                        <input type="file" id="userFilemain" name="userFilemain" />
+                     <label class="control-label" id="lblFname"></label>  <a href="#"class="btn btn-primary btn-sm" role="button"  id="fileUploadmain"> Upload file</a></br>
                     <span style="font-size:11px">(Pdf, Word documents, word perfect)</span>   </br>
                    
                 </div>
                 <div class="col-sm-5">                    
                                  
                 </div> 
+                <div class="col-md-12" >
+                                   </br>
+                                     <img id="loading" src="/Images/ajax-loader.gif" style="display:none;">  
+                                </div>
             </div>
 
 
@@ -51,9 +55,9 @@
             @Html.HiddenFor(model => model.CustomerDocumentId)
         @Html.HiddenFor(model => model.UserId)
             
-        <input type="submit" style="margin-right: 5px;" class="btn btn-success btn-sm" value="Upload File" />
+    @*    <input type="submit" style="margin-right: 5px;" class="btn btn-success btn-sm" value="Upload File" />
         </diV>
-
+*@
 
         <div class="col-md-5" style="text-align:right; margin-top:10px;">
         
@@ -66,11 +70,12 @@
             </div> 
     </div>
     <div  class="col-md-12">
+        </div>
     <hr />
             </div>
    
      <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12" id="divFileList">
             @Html.Partial("_FileList", Model.CustomerDocumentList)
         </div>
         </div>
