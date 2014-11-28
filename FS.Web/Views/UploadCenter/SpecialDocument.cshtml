@@ -162,13 +162,13 @@
                         }
                         @if (id == 2)
                         {
-                            <a class="btn btn-primary btn-sm pull-right" style="margin-left: 5px;"  role="button" href="~/Account/ContactPersonEdit/@id">Back
+                            <a class="btn btn-primary btn-sm pull-right" style="margin-left: 5px; margin-right:5px"  role="button" href="~/Account/ContactPersonEdit/@id">Back
                             </a> 
                         }
                         else 
                         {
                             
-                             <a class="btn btn-primary btn-sm pull-right" style="margin-left: 5px;"  role="button" href="~/UploadCenter/SpecialDocument/@(Convert.ToInt16(ViewContext.RouteData.Values["id"])-1)">Back
+                             <a class="btn btn-primary btn-sm pull-right" style="margin-left: 5px; margin-right:5px"  role="button" href="~/UploadCenter/SpecialDocument/@(Convert.ToInt16(ViewContext.RouteData.Values["id"])-1)">Back
                             </a> 
                         }
                       
