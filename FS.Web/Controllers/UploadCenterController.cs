@@ -357,7 +357,7 @@ namespace FS.Web.Controllers
             {
                 var docmodel = new DocumentModel();
                 var model = new CustomerDocument();
-                
+                var masterFiles = docmodel.DocumentTypes;
 
 
                 if (Request.Files == null || Request.Files.Count == 0 ||
@@ -375,12 +375,13 @@ namespace FS.Web.Controllers
                 model.DateUpload = DateTime.Now;
                 var filename = "";
                 var doc = userFiles.FirstOrDefault(d => d.DocumentKey == id);
-                model.DocumentName = id;
+                var masterDoc = masterFiles.FirstOrDefault(m => m.DataValue == id);
+                model.DocumentName = masterDoc != null ? masterDoc.DataText : id;
                 model.DocumentKey = id;
                 if (doc != null)
                 {
                     model.CustomerDocumentId = doc.CustomerDocumentId;
-                    model.DocumentName = doc.DocumentName;
+                    //model.DocumentName = doc.DocumentName;
                 }
 
                 if (Request.Files != null && Request.Files.Count > 0)
@@ -402,7 +403,7 @@ namespace FS.Web.Controllers
                     docId = obj.CustomerDocumentId.ToString();
 
                 userFiles = CustomerDocument.GetDocuments(CurrentUser.UserId);
-                return ("{error : '', msg : 'File added successfuly',id :'" + docId + "',docKey :'" + id + "', userId :'" + CurrentUser.UserId.ToString() + "', filename : '" + filename + "'}");
+                return ("{error : '', msg : 'File added successfuly', id :'" + docId + "', docKey :'" + id + "', userId :'" + CurrentUser.UserId.ToString() + "', filename : '" + filename + "'}");
 
                 //return PartialView("_FileList",userFiles);
 

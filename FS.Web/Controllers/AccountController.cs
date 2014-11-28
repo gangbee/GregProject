@@ -300,7 +300,7 @@ namespace FS.Web.Controllers
             //return View(modelc);
             if (ssfrmWzrd)
                 return new RedirectResult("~/UploadCenter/SpecialDocument/1");
-            else return View(modelc);
+            else return View("ContactPersonView",modelc);
 
         }
 
