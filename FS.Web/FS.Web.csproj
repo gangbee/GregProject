@@ -312,6 +312,8 @@
     <Content Include="Images\step.png" />
     <Content Include="Images\step_over.png" />
     <Content Include="Images\twt.png" />
+    <Content Include="Images\word.png" />
+    <Content Include="Images\wp.png" />
     <Content Include="img\glyphicons-halflings-white.png" />
     <Content Include="img\glyphicons-halflings.png" />
     <Content Include="index.html" />
@@ -360,7 +362,6 @@
     <Content Include="Content\fonts\slick.eot" />
     <Content Include="Content\fonts\slick.ttf" />
     <Content Include="Content\fonts\slick.woff" />
-    <Content Include="Images\Thumbs.db" />
     <None Include="Properties\PublishProfiles\Fsweb.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -439,10 +440,10 @@
     <Content Include="Scripts\locales\bootstrap-datepicker.zh-CN.js" />
     <Content Include="Scripts\locales\bootstrap-datepicker.zh-TW.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\sample.js" />
     <Content Include="Scripts\scripts.js" />
     <Content Include="Scripts\unslider.js" />
     <Content Include="Scripts\wizard.js" />
-    <Content Include="Views\index.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -526,6 +527,8 @@
     <Content Include="Web.config.uninstall.xdt" />
     <Content Include="Web.config.install.xdt" />
     <Content Include="Views\Home\CheckList-new.cshtml" />
+    <Content Include="Views\Home\MyPage.cshtml" />
+    <Content Include="Views\Shared\_SendFileList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

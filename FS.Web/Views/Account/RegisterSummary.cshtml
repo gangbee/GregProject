@@ -51,16 +51,25 @@
 
 
                  <div class="form-group">
-                     <div class="col-md-5">
+                  @*   <div class="col-md-5">
                          
                          
                        
-                     </div>
+                     </div>*@
+                     <div class="col-sm-12">
+                         <h4>Sending Information</h4>
+                       </div>
                        <div class="col-sm-12">
-                           &nbsp;
+                          
+                           @Html.Partial("_SendFileList", Model.SendDocuments)
+
+
                        </div>
                  </div>
                 <div class="form-group">
+                     <div class="col-sm-12">
+                         <h4>Files Uploaded</h4>
+                       </div>
                     <div class="col-sm-12">
                         @Html.Partial("_FileList", Model.Documents)
                     </div>

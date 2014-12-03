@@ -19,6 +19,8 @@ namespace FS.Web.Models
 
         public List<CustomerDocument> Documents { get; set; }
 
+        public List<SendDocument> SendDocuments { get; set; }
+
        
         public CheckList CheckList { get; set; }
         

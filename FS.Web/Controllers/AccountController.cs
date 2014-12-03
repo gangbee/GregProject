@@ -446,6 +446,7 @@ namespace FS.Web.Controllers
             if(model.ContactPerson.Relationship >0)
                 model.ContactPerson.RelationshipName = Persistance.ResolveKey<ValuseData>(model.ContactPerson.Relationship).DataText;
             model.CheckList = FS.Customer.CheckList.GetCheckList(CurrentUser.UserId);
+            model.SendDocuments = FS.Customer.SendDocument.GetSendDocuments(CurrentUser.UserId);
             return View(model);
         }
 

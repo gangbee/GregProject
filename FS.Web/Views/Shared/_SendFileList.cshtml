@@ -1,0 +1,53 @@
+﻿@model IEnumerable<FS.Customer.SendDocument>
+
+<table class="table table-striped">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>    *@
+        <th>
+            Document
+        </th>
+        <th>
+            Upload Date
+        </th>
+        <th>
+             Institute
+        </th>
+        <th>
+             Date Sent
+        </th>
+         <th>
+             Confirmation
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+       @* <td>
+            @Html.DisplayFor(modelItem => item.UserId)
+        </td>*@
+   
+        <td>
+            @Html.DisplayFor(modelItem => item.UserDocument.DocumentName)
+        </td>
+        <td>
+            @item.UserDocument.DateUpload.ToShortDateString()
+            @*@Html.DisplayFor(modelItem => item.UserDocument.DateUpload.ToShortDateString())*@
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Institute.Name)
+        </td>
+        <td>
+            @item.SendDate.ToShortDateString()
+            @*@Html.DisplayFor(modelItem => item.SendDate.ToLongDateString())*@
+        </td>
+        <td>
+             @Html.Raw(item.DateReceived.Year !=  1900 ? "<span  class=\"glyphicon glyphicon-ok green\" style=\"font-size: 16px;\"></span>" : "<span  class=\"glyphicon glyphicon-remove red\" style=\"font-size: 16px;\"></span>")
+         
+        </td>
+    </tr>
+}
+
+</table>

@@ -59,13 +59,16 @@
         </diV>
 *@
 
-        <div class="col-md-5" style="text-align:right; margin-top:10px;">
+        <div class="col-md-12" style="text-align:right; margin-top:10px;">
         
         @if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString().ToLower() != "uploadfiles")
         {
                <a class="btn btn-primary btn-sm" style="margin-right:5px;" role="button" href="~/Account/RegisterSummary">NEXT
         </a>
+             <a class="btn btn-primary btn-sm" style="margin-right:5px;" role="button" href="~/SendCenter/SendDocuments">Directory
+        </a>
         }
+           
       
             </div> 
     </div>
