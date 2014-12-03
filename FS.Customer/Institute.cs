@@ -11,7 +11,7 @@ namespace FS.Customer
     [StoredProcedure(CreateProcedure = "InsertInstitute", ReadProcedure = "GetInstituteById", UpdateProcedure = "UpdateInstitute")]
     public class Institute
     {
-        [DataColumn("InstituteId")]
+        [PrimaryKey,DataColumn("InstituteId")]
         private int _InstituteId;
         public int InstituteId
         {
@@ -76,7 +76,8 @@ namespace FS.Customer
         public static List<Institute> GetAllInstitues()
         {
             return Persistance.ReadList<Institute>("GetAllInstitute");
-        }
+        }
+
 
     }
 }

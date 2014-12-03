@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
@@ -63,6 +64,28 @@ namespace FS.Customer
             set { _DateReceived = value; }
         }
 
+        public CustomerDocument UserDocument
+        {
+            get
+            {
+                return Persistance.ResolveKey<CustomerDocument>(this._CustomerDocumentId);
+            }
+        }
 
+        public Institute Institute
+        {
+            get
+            {
+                return Persistance.ResolveKey<Institute>(this._InstiteId);
+            }
+        }
+
+
+        public static List<SendDocument> GetSendDocuments(int userId)
+        {
+            return Persistance.ReadList<SendDocument>("GetSendDocuments", new SqlParameter("@UserId", userId));
+
+
+        }
     }
 }
