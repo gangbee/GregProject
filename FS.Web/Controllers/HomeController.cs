@@ -27,6 +27,26 @@ namespace FS.Web.Controllers
 
             return View();
         }
+        public ActionResult Video()
+        {
+           
+
+            return View();
+        }
+        public ActionResult Process()
+        {
+
+
+            return View();
+        }
+
+        public ActionResult Perch()
+        {
+
+
+            return View();
+        }
+        
         public ActionResult Info()
         {
            
