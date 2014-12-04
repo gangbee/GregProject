@@ -59,12 +59,30 @@
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right navbar-user">
-                    <li><a href="~/Home/Index"><i class="fa fa-envelope"></i>Home</a> </li>
                     <li class="dropdown messages-dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i>Welcome <span style="color:#00ffff; font-weight:bold;">@User.Identity.Name !</span></a>
-                    </li>                    
+                    </li>
+
+                    <li><a href="~/Home/Index"><i class="fa fa-envelope"></i>Home</a> </li>
+                   <li>
+                            <a href="~/Home/About">What Owls Do</a>
+                            <ul>
+                                <li style="padding:10px;">The process </br></li>
+                                <li style="padding:10px;">Video tutorial </br></li>
+                                <li style="padding:10px;">Resources</br></li>
+                                <li style="padding:10px;">Pricing</li>
+                            </ul>
+                        </li>
+                    <li><a href="~/Account/ContactPerson">Caregiver/ My Account</a></li>
+                     
+                    <li><a href="~/Home/About">The Perch</a></li>
+                    <li><a href="~/Home/Contact">Contact Us</a></li>  
+                                     
                     <li><a href="~/Account/LogOff"><i class="fa fa-envelope"></i>Logout</a> </li>
                 </ul>
+
+
+
             </div>
             <!-- /.navbar-collapse -->
         </nav>

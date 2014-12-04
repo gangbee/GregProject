@@ -40,8 +40,20 @@
             </li>
             <li>
                 <a href="~/Home/About">What Owls Do</a>
+                <ul>
+                    <li style="padding:10px;">The process </br></li>
+                    <li style="padding:10px;">Video tutorial </br></li>
+                    <li style="padding:10px;">Resources</br></li>
+                    <li style="padding:10px;">Pricing</li>
+                </ul>
             </li>
-           
+           <li>
+                <a href="~/Home/About">The Perch</a>
+            </li>
+
+            <li>
+                <a href="~/Home/Contact">Contact Us</a>
+            </li>
             <li>
                 @if (HttpContext.Current.User.Identity.IsAuthenticated)
                 {
@@ -57,9 +69,7 @@
                     <a href="~/Account/RegisterSummary">Summary</a> 
                 }
             </li>
-             <li>
-                <a href="~/Home/Contact">Contact Us</a>
-            </li>
+             
         </ul>
     </div>
 
