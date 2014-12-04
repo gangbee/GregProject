@@ -124,9 +124,9 @@
                             <div id="links" style="@(string.IsNullOrWhiteSpace(Model.FileName) ? "display:none" : "")">
                             <label class="col-sm-4 control-label"></label>
                              <a href="~/Document/@Model.UserId.ToString()_@Model.DocumentKey/@Model.FileName" id="pdfLink" target="_blank">
-                                <img src="@imgIcon" alt="" id="imgpdf"  /> &nbsp;<div id="filenamediv" class="row">  @Model.FileName </div>
+                                <img src="@imgIcon" alt="" id="imgpdf" style="padding-left:3%"  /> &nbsp;<div id="filenamediv" style="padding-left:36%" class="row">  @Model.FileName </div>
                              </a>
-                                  <a href="~/UploadCenter/DeleteDocument/@Model.CustomerDocumentId" id="delPdf" ><span class="badge" ><span  class="glyphicon glyphicon-remove red" style="font-size: 16px;"></span></span>
+                                  <a href="~/UploadCenter/DeleteDocument/@Model.CustomerDocumentId" id="delPdf" ><span class="badge" ><span  class="glyphicon glyphicon-remove red" style="font-size: 12px; padding-left:75%; color:red;">REMOVE</span></span>
                              </a>
                             </div>
                             @*}*@
