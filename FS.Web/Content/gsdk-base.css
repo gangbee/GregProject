@@ -34,6 +34,13 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 
 /* Drop Down Menu*/
 
+ul li ul li a
+{
+padding : 7px 10px 0px 10px !important;
+width   : 130px;
+font-size : 12px;
+}
+
 ul {
   text-align: left;
   display: inline;
@@ -81,7 +88,8 @@ ul li ul {
 
 }
 ul li ul li { 
-  background: #555; 
+  
+  background: #666;
   display: block; 
   color: #fff;
   text-shadow: 0 -1px 0 #000;
@@ -89,7 +97,7 @@ ul li ul li {
   text-align:center;
  
 }
-ul li ul li:hover { background: #666;}
+ul li ul li:hover {background: #555;  }
 ul li:hover ul {
   display: block;
   opacity: 1;
