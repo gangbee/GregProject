@@ -63,10 +63,10 @@
         
         @if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString().ToLower() != "uploadfiles")
         {
-               <a class="btn btn-primary btn-sm" style="margin-right:5px;" role="button" href="~/Account/RegisterSummary">NEXT
+               <a class="btn btn-primary btn-sm" style="margin-right:5px;" role="button" href="~/SendCenter/SendDocuments">NEXT
         </a>
-             <a class="btn btn-primary btn-sm" style="margin-right:5px;" role="button" href="~/SendCenter/SendDocuments">Directory
-        </a>
+             @*<a class="btn btn-primary btn-sm" style="margin-right:5px;" role="button" href="~/SendCenter/SendDocuments">Directory
+        </a>*@
         }
            
       
