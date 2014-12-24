@@ -335,7 +335,8 @@ namespace FS.Web.Controllers
             if (ModelState.IsValid)
             {
                 var filename = "";
-               
+                var cntPer = Persistance.ResolveKey<ContactPerson>(model.ContactPersonId);
+                
                 if (Request.Files != null && Request.Files.Count > 0)
                 {
                     filename =  Path.GetFileName(Request.Files[0].FileName);
@@ -347,11 +348,17 @@ namespace FS.Web.Controllers
                         
 
                     }
-                    if(!string.IsNullOrWhiteSpace(filename))
+                    if (!string.IsNullOrWhiteSpace(filename))
+                    {
                         Request.Files[0].SaveAs(Server.MapPath("//" + PictureFilePath + "//" + dir + "//" + filename));
+                       // model.PicturePath = filename;
+                    }
                 }
-              
-
+                if (!string.IsNullOrWhiteSpace(filename))
+                    model.PicturePath = filename;
+                else if (model.ContactPersonId != 0 && cntPer != null)
+                    model.PicturePath = cntPer.PicturePath; 
+                
                 model.Address2 = model.Address2 ?? "";
                 model.UserId = CurrentUser.UserId;
                 model = Persistance.Update<ContactPerson>(model);
