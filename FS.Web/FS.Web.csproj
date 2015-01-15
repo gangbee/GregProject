@@ -228,6 +228,7 @@
     <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Content\filesecure.css" />
     <Content Include="Content\img\ajax-loader.gif" />
+    <Content Include="Content\img\ajax-loader4.gif" />
     <Content Include="Content\style1.css" />
     <Content Include="Content\styles.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -529,6 +530,9 @@
     <Content Include="Views\Home\CheckList-new.cshtml" />
     <Content Include="Views\Home\MyPage.cshtml" />
     <Content Include="Views\Shared\_SendFileList.cshtml" />
+    <Content Include="Views\Home\Process.cshtml" />
+    <Content Include="Views\Home\Video.cshtml" />
+    <Content Include="Views\Home\Perch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -572,10 +576,11 @@
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
-          <AutoAssignPort>False</AutoAssignPort>
-          <DevelopmentServerPort>41492</DevelopmentServerPort>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>19364</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:21670/</IISUrl>
+          <IISUrl>
+          </IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
