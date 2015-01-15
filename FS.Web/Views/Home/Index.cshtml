@@ -51,9 +51,22 @@
                      <li>
                         <a href="~/Home/Contact">Contact Us</a>
                     </li>
-                    <li>
-                        <a href="~/Account/LoginView">Login</a>
-                    </li>
+                   <li>
+                    @if (HttpContext.Current.User.Identity.IsAuthenticated)
+                    {
+                         <span>Welcome  @((HttpContext.Current.User as Infarstructure.PrincipalProvider).User.FirstName)</span> 
+                        <a href="~/Account/LogOff">Logout</a> 
+                    }else
+                    {
+                            <a href="~/Account/LoginView">Login</a>
+                    }
+                </li>
+                        <li>
+                    @if (HttpContext.Current.User.Identity.IsAuthenticated)
+                    {
+                        <a href="~/Account/RegisterSummary">Summary</a> 
+                    }
+                </li>
                 </ul>
         </div>
      <div style="position:absolute ; top:60px; right:60px; width:450px">

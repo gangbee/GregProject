@@ -5,6 +5,40 @@
 var fs = fs || {};
 
 
+//$(function () {
+
+    
+
+//    // you won't need this button click
+//    // just call the loading function directly
+    
+
+
+//});
+
+var loading = function () {
+    // add the overlay with loading image to the page
+    var over = '<div id="overlay">' +
+        '<img id="loading" src="/Images/ajax-loader4.gif">' +
+        '</div>';
+    $(over).appendTo('body');
+
+    //// click on the overlay to remove it
+    //$('#overlay').click(function () {
+    //    $(this).remove();
+    //});
+
+    //// hit escape to close the overlay
+    //$(document).keyup(function (e) {s
+    //    if (e.which === 27) {
+    //        $('#overlay').remove();
+    //    }
+    //});
+};
+var unloading = function () {
+
+    $('#overlay').remove();
+};
 
 function numbersonly(myfield, e, dec) {
     var key;
@@ -304,17 +338,17 @@ function uploadFile() {
 
 function ajaxFileUpload() {
 
-    $("#loading")
-.ajaxStart(function () {
-    $(this).show();
+//    $("#loading")
+//.ajaxStart(function () {
+//    $(this).show();
 
     
 
-})
-.ajaxComplete(function () {
-    $(this).hide();
-});
-
+//})
+//.ajaxComplete(function () {
+//    $(this).hide();
+//});
+    loading();
     var jobid = $("#frmUpload input#docKey").val();
     var urlstr = '/UploadCenter/DocumentUpload/' + jobid;
     $.ajaxFileUpload
@@ -333,6 +367,7 @@ function ajaxFileUpload() {
                 } else
                 {
                     //alert(data.msg);
+                    unloading();
                     var deleteLink = "/UploadCenter/DeleteDocument/" + data.id;
                     var showLink = "/Document/" + data.userId + "_" + data.docKey + "/" + data.filename;
                     $("#delPdf").attr("href", deleteLink);
@@ -350,6 +385,7 @@ function ajaxFileUpload() {
                     }
 
                     $("#imgpdf").attr("src", icon);
+                   
                     //imgDoc
                 }
             }
